@@ -1,5 +1,19 @@
 <template>
-  <div class="products">
-    <h1>This is the products page</h1>
+  <div>
+    <ProductsBlock />
+    <h1>This is a products page</h1>
   </div>
 </template>
+
+<script>
+import ProductsBlock from "../components/ProductsBlock.vue";
+export default {
+  name: "App",
+  components: {
+    ProductsBlock,
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+</style>
