@@ -24,7 +24,7 @@ export default createStore({
       },
       {
         name: "Cardigan Sweater",
-        id: 533603,
+        id: 53363,
         price: 49.5,
         color: "red",
         size: "medium",
@@ -77,5 +77,5 @@ export default createStore({
   },
   mutations: {},
   actions: {},
-  modules: {},
+  getters: {},
 });

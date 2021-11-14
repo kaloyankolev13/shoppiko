@@ -4,8 +4,7 @@
       <h1>{{ msg }}</h1>
       <div id="nav">
         <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
-        <router-link to="/products">Products</router-link>
+        <router-link to="/about">About</router-link>
       </div>
     </div>
   </div>
@@ -15,7 +14,7 @@
 export default {
   data() {
     return {
-      msg: "shopiko",
+      msg: "shopp iko",
     };
   },
 };
@@ -39,10 +38,9 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
-/* #nav{
-        
-    } */
+
 #nav a {
+  text-decoration: none;
   font-weight: bold;
   color: #2c3e50;
   padding: 10px;
