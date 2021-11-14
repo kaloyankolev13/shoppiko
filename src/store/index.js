@@ -77,5 +77,9 @@ export default createStore({
   },
   mutations: {},
   actions: {},
-  getters: {},
+  getters: {
+    product: (state) => (id) => {
+      return state.products.filter((p) => p.id === Number(id))[0];
+    },
+  },
 });
