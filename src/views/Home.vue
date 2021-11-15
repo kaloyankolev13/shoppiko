@@ -1,15 +1,15 @@
 <template>
   <div>
-    <Products />
+    <Showcase />
   </div>
 </template>
 
 <script>
-import Products from "../components/Products.vue";
+import Showcase from "../components/ProductsShowcase.vue";
 export default {
   name: "App",
   components: {
-    Products,
+    Showcase,
   },
 };
 </script>

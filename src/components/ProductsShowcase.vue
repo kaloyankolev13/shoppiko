@@ -47,6 +47,7 @@ export default {
     margin-bottom: 20px;
   }
 }
+
 .featured-items {
   background-color: #f5f5f5;
   display: flex;
@@ -54,6 +55,9 @@ export default {
   list-style: none;
   padding: 30px 10px;
   border-radius: 20px;
+  a {
+    text-decoration: none;
+  }
 }
 .featured-item_items {
   justify-content: space-between;
