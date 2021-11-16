@@ -7,6 +7,8 @@
       <div class="flex-col-2">
         <h2>{{ product.name }}</h2>
         <p>Price : {{ product.price }}$</p>
+        <p>Color : {{ product.color }}</p>
+        <p>Size : {{ product.size }}</p>
       </div>
     </section>
   </div>

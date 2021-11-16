@@ -14,6 +14,7 @@ export default createStore({
         quantity: 10,
         dateAdded: "Tue 24 March",
         category: "Shirts",
+        stock:0,
         details: {
           material: "cotton",
           fit: "regular",

@@ -10,7 +10,9 @@
         >
           <router-link :to="{ name: 'product', params: { id: product.id } }">
             <img class="product-image" :src="imagePath(product)" alt="" />
-            <p class="product-title">{{ product.name }}</p>
+            <p class="product-title" :class="{ 'no-stock': !isAvailable }">
+              {{ product.name }}
+            </p>
             <p>
               <em>$ {{ product.price }}</em>
             </p>
@@ -24,6 +26,11 @@
 <script>
 export default {
   name: "Products",
+  data() {
+    return {
+      isAvailable: true,
+    };
+  },
   computed: {
     products() {
       return this.$store.state.products;
@@ -32,6 +39,11 @@ export default {
   methods: {
     imagePath(product) {
       return require(`../assets/img/products/${product.images[0]}`);
+    },
+    ifAvaliabe() {
+      if (this.product.stock <= 0) {
+        this.isAvailable = false;
+      }
     },
   },
 };
@@ -59,9 +71,18 @@ export default {
     text-decoration: none;
   }
 }
+
 .featured-item_items {
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 30px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px #ccc;
 }
+
 .product-image {
   width: 60%;
   margin: 0 auto;
@@ -71,5 +92,9 @@ export default {
   font-weight: bold;
   font-size: 1.2rem;
   margin: 0;
+}
+
+.no-stock {
+  text-decoration: line-through;
 }
 </style>
