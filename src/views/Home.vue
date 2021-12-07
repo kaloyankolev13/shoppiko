@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Showcase from "../components/ProductsShowcase.vue";
+import Showcase from "./ProductsShowcase.vue";
 export default {
   name: "App",
   components: {
