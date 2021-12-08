@@ -3,7 +3,11 @@
     <div class="maybe-like">
       <NavigationBar />
     </div>
-    <router-view></router-view>
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
 </template>
 
@@ -31,5 +35,15 @@ export default {
   a {
     color: #2c3e50;
   }
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-out;
 }
 </style>
